@@ -76,6 +76,12 @@ H1 H2 H3 H4 H5 H6 {
     flex-direction: row;
     justify-content: center;
 }
+main {
+    border: 2px dotted darkred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .inner-box {
     border: 2px dotted greenyellow;
     flex-basis: 990px;
@@ -85,6 +91,9 @@ H1 H2 H3 H4 H5 H6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.box-1 {
+    border: 2px dashed orange;
 }
 /* --------------- 3.1 Reusables ----------------------- */
 
