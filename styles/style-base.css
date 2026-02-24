@@ -70,7 +70,22 @@ H1 H2 H3 H4 H5 H6 {
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
-
+.outer-box {
+    border: 2px dotted var(--zwart);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.inner-box {
+    border: 2px dotted greenyellow;
+    flex-basis: 990px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* --------------- 3.1 Reusables ----------------------- */
 
 /* --------------- 3.2 Other --------------------------- */
@@ -80,7 +95,12 @@ H1 H2 H3 H4 H5 H6 {
 /* --------------- 4.1 Header ------------------------- */
 
 /* --------------- 4.2 Main ------------------------- */
-
+div{
+    border: 1px dashed blue;
+}
+article {
+    border: 1px dashed red;
+}
 /* --------------- 4.2.1 Introduction ------------------- */
 
 
