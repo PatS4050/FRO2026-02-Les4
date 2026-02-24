@@ -11,8 +11,8 @@
         4.2.1 Introduction
         4.3 Footer
  */
-    /*    etc.*/
-    /*5. Media Queries*/
+/*    etc.*/
+/*5. Media Queries*/
 /*///////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
@@ -25,29 +25,50 @@
 ol, ul {
     list-style: none;
 }
+
+:root {
+    --paars: #5722CD;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --lichtpaars: #F2F0FF;
+    --lichtgrijs: #F3F6F9;
+    --grijs: #7A7A7A;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
-// <weight>: Use a value from 300 to 900
-// <uniquifier>: Use a unique and descriptive class name
-.merriweather-<uniquifier> {
-                   font-family: "Merriweather", serif;
-                   font-optical-sizing: auto;
-                   font-weight: <weight>;
-                   font-style: normal;
-                   font-variation-settings:
-                           "wdth" 100;
-               }
+//<weight > : Use a value from  300  to  900
+//<uniquifier > : Use a unique and descriptive class name .merriweather-
 
-// <weight>: Use a value from 100 to 900
-// <uniquifier>: Use a unique and descriptive class name
+<uniquifier > {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: < weight >;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
 
-    .roboto-<uniquifier> {
-                 font-family: "Roboto", sans-serif;
-                 font-optical-sizing: auto;
-                 font-weight: <weight>;
-                 font-style: normal;
-                 font-variation-settings:
-                         "wdth" 100;
-             }
+//<weight > : Use a value from 100 to 900
+//<uniquifier > : Use a unique and descriptive class name .roboto-
+
+<uniquifier > {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: < weight >;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--zwart);
+}
+
+H1 H2 H3 H4 H5 H6 {
+    font-family: "Merriweather", sans-serif;
+    color: var(--zwart);
+}
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
@@ -64,7 +85,6 @@ ol, ul {
 
 
 /* --------------- 4.3 Footer ------------------------- */
-
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
