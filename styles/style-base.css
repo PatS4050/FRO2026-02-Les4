@@ -45,20 +45,37 @@ ol, ul {
 p {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-size: 19px;
+    font-weight: 300;
     font-style: normal;
     font-variation-settings: normal;
     color: var(--zwart);
 }
 
-h1, H2, H3, H4, H5, H6 {
+h1 {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+H2, H3, H4, H5, H6 {
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-variation-settings: normal;
 }
-
+a {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: normal;
+}
 /* ------------------------------- 3. Layout --------------------------------------- */
 .outer-box {
     display: flex;
@@ -83,14 +100,15 @@ h1, H2, H3, H4, H5, H6 {
 /* --------------- 3.1 Reusables ----------------------- */
 .box-1 {
     border: 2px dashed orange;
-    width: 576px;
+    width: 620px;
+    padding: 60px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 16px;
     color: white;
-
+    text-align: center;
+    gap: 24px;
 }
 
 .box-2 {
@@ -105,6 +123,11 @@ h1, H2, H3, H4, H5, H6 {
     flex-wrap: wrap;
 }
 
+.picto {
+    width: 36px;
+    image-rendering: high-quality;
+    margin: -5px;
+}
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -113,31 +136,56 @@ h1, H2, H3, H4, H5, H6 {
 header .inner-box {
     background: linear-gradient(90deg, var(--blauw), var(--paars));
 }
+
 nav {
-    border: 2px dotted white;
+    padding: 12px 36px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: white;
 
 }
+
 nav ul{
-    border: 2px dashed white;
-    flex-basis:700px;
-    flex-grow: 0;
-    flex-shrink: 1;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    gap: 36px;
 }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+header .inner-box p {
+    color: white;
+}
+header .inner-box button {
+    color: white;
+    background: var(--roze);
+    padding: 18px 36px;
+    border-radius: 36px;
+    border: none;
+    box-shadow: var(--paars) 5px 5px 5px;
+    font-size: 10px;
+    font-weight: 100;
+    font-style: initial;
+    text-transform: uppercase;
+}
+
 /* --------------- 4.2 Main ------------------------- */
+main .box-1 p{
+    font-size: 14px;
+    font-weight: 300;
+    padding: 36px 0 0 0;
+
+}
 div {
     border: 1px dashed blue;
 }
 
 main .box-1 {
     color: var(--paars);
+    gap: 28px;
 }
 
 article {
