@@ -39,6 +39,9 @@ ol, ul {
     --lichtpaars: #F2F0FF;
     --lichtgrijs: #F3F6F9;
     --grijs: #7A7A7A;
+    --width-l: 990px;
+    --width-m: 620px;
+    --width-s: 320px;
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- *
@@ -82,18 +85,26 @@ a {
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 1;
+}
 .outer-box {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 1;
 }
 
+
 .inner-box {
-    border: 2px dotted greenyellow;
     margin: 0 18px;
-    flex-basis: 990px;
+    flex-basis: var(--width-l);
     flex-grow: 0;
-    flex-shrink: 0;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +114,7 @@ a {
 
 /* --------------- 3.1 Reusables ----------------------- */
 .box-1 {
-    width: 620px;
+    width: var(--width-m);
     padding: 60px 0;
     display: flex;
     flex-direction: column;
@@ -113,9 +124,7 @@ a {
     gap: 24px;
 }
 
-.box-2 {
-    width: 100%;
-}
+
 
 .box-3 {
     display: flex;
@@ -127,7 +136,7 @@ a {
 }
 
 .box-5 {
-    width: 620px;
+    width: var(--width-m);
     padding: 48px 0;
     display: flex;
     flex-direction: column;
@@ -141,6 +150,10 @@ a {
     width: 36px;
     image-rendering: high-quality;
     margin: -5px;
+}
+
+img {
+    width: 100%;
 }
 
 button {
@@ -199,26 +212,60 @@ main .box-1 p {
 
 }
 
-div {
-    border: 1px dashed blue;
-}
-
 main .box-1 {
     color: var(--paars);
     gap: 28px;
 }
 
-article {
-
-}
 /* --------------- 4.2.2 projecten------------------- */
-
-.products {
-    border: 1px dashed red;
-    flex-basis: 300px;
+.box-2 {
+    background-color: var(--lichtgrijs);
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+}
+.projects {
+    flex-basis: var(--width-l);
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    padding: 24px;
+}
+.projects:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.description {
+    flex-basis: 360px;
     flex-grow: 0;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+/*p {*/
+/*    border: 3px solid var(--lichtgrijs);*/
+/*    font-size: 14px;*/
+/*    font-weight: 200;*/
+/*}*/
 
+.squiggle {
+    width: 42px;
+}
+.work {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.img-wrapper {
+    border: solid 2px orange;
+    flex-basis: 450px;
+    flex-grow: 0;
+    flex-shrink: 1;
 }
 
 /* --------------- 4.2.3 Services------------------- */
