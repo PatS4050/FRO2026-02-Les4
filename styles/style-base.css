@@ -177,8 +177,7 @@ button {
 .triangle {
     width: 0;
     height: 0;
-    display: block;
-    border-left: max(990px) solid white;
+    border-left: 100vw solid white;
     border-right: 2 px solid transparant;
     border-top: 18px solid transparent;
 }
@@ -187,13 +186,13 @@ button {
     width: 0;
     height: 0;
     border-left: 2px solid transparant;
-    border-right: max(990px) solid white;
+    border-right: 100vw solid white;
     border-bottom: 19px solid transparent;
 }
 ›
 .triangle-1 {
     height: 0;
-    border-left: max(990px) solid var(--lichtgrijs);
+    border-left: 100vw solid var(--lichtgrijs);
     /*border-left: max(990px) solid red;*/
     border-right: 2 px solid transparant;
     border-top: 18px solid transparent;
@@ -203,7 +202,7 @@ button {
     width: 0;
     height: 0;
     border-left: 2px solid transparant;
-    border-right: max(990px) solid var(--lichtgrijs);
+    border-right: 100vw solid var(--lichtgrijs);
     /*border-right: max(990px) solid green;*/
     border-bottom: 19px solid transparent;
     /*background: var(--lichtgrijs);*/
