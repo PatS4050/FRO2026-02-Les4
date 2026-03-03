@@ -152,6 +152,10 @@ body {
     margin: -5px;
 }
 
+.picto-box {
+    line
+}
+
 img {
     width: 100%;
 }
@@ -167,6 +171,42 @@ button {
     font-weight: 100;
     font-style: initial;
     text-transform: uppercase;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: max(990px) solid white;
+    border-right: 2 px solid transparant;
+    border-top: 18px solid transparent;
+}
+
+.triangle-2 {
+    width: 0;
+    height: 0;
+    border-left: 2px solid transparant;
+    border-right: max(990px) solid white;
+    border-bottom: 19px solid transparent;
+}
+›
+.triangle-1 {
+    height: 0;
+    border-left: max(990px) solid var(--lichtgrijs);
+    /*border-left: max(990px) solid red;*/
+    border-right: 2 px solid transparant;
+    border-top: 18px solid transparent;
+}
+
+.triangle-3 {
+    width: 0;
+    height: 0;
+    border-left: 2px solid transparant;
+    border-right: max(990px) solid var(--lichtgrijs);
+    /*border-right: max(990px) solid green;*/
+    border-bottom: 19px solid transparent;
+    /*background: var(--lichtgrijs);*/
 }
 /* --------------- 3.2 Other --------------------------- */
 
@@ -201,37 +241,7 @@ nav ul li a {
 header .inner-box p {
     color: white;
 }
-.triangle {
-    width: 0;
-    height: 0;
-    border-left: max(990px) solid white;
-    border-right: 2 px solid transparant;
-    border-top: 18px solid transparent;
-}
 
-.triangle-2 {
-    width: 0;
-    height: 0;
-    border-left: 2px solid transparant;
-    border-right: max(990px) solid white;
-    border-bottom: 19px solid transparent;
-}
-
-.triangle-1 {
-    width: 0;
-    height: 0;
-    border-left: max(990px) solid var(--lichtgrijs);
-    border-right: 2 px solid transparant;
-    border-top: 18px solid transparent;
-}
-
-.triangle-3 {
-    width: 0;
-    height: 0;
-    border-left: 2px solid transparant;
-    border-right: max(990px) solid var(--lichtgrijs);
-    border-bottom: 19px solid transparent;
-}
 
 /* --------------- 4.2 Main ------------------------- */
 
@@ -400,3 +410,19 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+/* Alles wat men buiten de media query specificeert, geldt dan voor grote schermen */
+
+/* max 768px betekend regels die gelden voor tablets */
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 14px;
+    }
+
+
+
+/* Minimaal 992px betekend regels die gelden voor kleine computerschermen */
+@media screen and (max-width: 570px) {
+    p {
+        font-size: 12px;
+    }
+
