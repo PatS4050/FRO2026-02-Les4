@@ -91,6 +91,7 @@ body {
     justify-content: center;
     flex-shrink: 1;
 }
+
 .outer-box {
     display: flex;
     flex-direction: row;
@@ -122,8 +123,8 @@ body {
     align-items: center;
     text-align: center;
     gap: 24px;
+    z-index: 2;
 }
-
 
 
 .box-3 {
@@ -153,7 +154,6 @@ body {
 }
 
 .picto-box {
-    line
 }
 
 img {
@@ -178,35 +178,38 @@ button {
     width: 0;
     height: 0;
     border-left: 100vw solid white;
-    border-right: 2 px solid transparant;
+    border-right: 2px solid transparent;
     border-top: 18px solid transparent;
 }
 
 .triangle-2 {
     width: 0;
     height: 0;
-    border-left: 2px solid transparant;
+    border-left: 2px solid transparent;
     border-right: 100vw solid white;
     border-bottom: 19px solid transparent;
 }
+
 ›
 .triangle-1 {
+    width: 0;
     height: 0;
     border-left: 100vw solid var(--lichtgrijs);
     /*border-left: max(990px) solid red;*/
-    border-right: 2 px solid transparant;
+    border-right: 2px solid transparent;
     border-top: 18px solid transparent;
 }
 
 .triangle-3 {
     width: 0;
     height: 0;
-    border-left: 2px solid transparant;
+    border-left: 2px solid transparent;
     border-right: 100vw solid var(--lichtgrijs);
     /*border-right: max(990px) solid green;*/
     border-bottom: 19px solid transparent;
     /*background: var(--lichtgrijs);*/
 }
+
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -257,6 +260,16 @@ main .box-1 {
 }
 
 /* --------------- 4.2.2 projecten------------------- */
+.inner-box .background-text {
+    background-clip: text;
+    position: absolute;
+    top: 500px;
+    font-size: 320px;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: var(--lichtpaars);
+    z-index: 2;
+}
 .box-2 {
     background-color: var(--lichtgrijs);
     width: 100%;
@@ -265,6 +278,7 @@ main .box-1 {
     align-items: center;
     flex-shrink: 1;
 }
+
 .projects {
     flex-basis: var(--width-l);
     flex-grow: 0;
@@ -276,9 +290,11 @@ main .box-1 {
     gap: 36px;
     padding: 24px;
 }
+
 .projects:nth-child(even) {
     flex-direction: row-reverse;
 }
+
 .description {
     flex-basis: 360px;
     flex-grow: 0;
@@ -287,6 +303,7 @@ main .box-1 {
     flex-direction: column;
     gap: 24px;
 }
+
 /*p {*/
 /*    border: 3px solid var(--lichtgrijs);*/
 /*    font-size: 14px;*/
@@ -296,16 +313,19 @@ main .box-1 {
 .squiggle {
     width: 42px;
 }
+
 .work {
     text-decoration: none;
     text-transform: capitalize;
     color: var(--paars);
 }
+
 .img-wrapper {
     flex-basis: 450px;
     flex-grow: 0;
     flex-shrink: 1;
 }
+
 .work::after {
     display: block;
     position: relative;
@@ -317,30 +337,35 @@ main .box-1 {
     background-color: var(--paars);
     transition: width 0.4s ease-in-out;
 }
+
 .work:hover::after {
     width: 20%;
 }
+
 /* --------------- 4.2.3 Services------------------- */
 .services {
     border: 1px solid var(--paars);
-    box-shadow: 9px 9px 9px var(--lichtgrijs) ;
+    box-shadow: 9px 9px 9px var(--lichtgrijs);
     flex-basis: 240px;
     padding: 24px;
     height: 240px
 }
+
 .icon {
     width: 69px;
 }
+
 .services H3 {
     color: var(--paars);
     padding: 4px 0;
 }
+
 .services p {
     font-size: 10px;
     font-weight: 100;
 }
 
-    /* --------------- 4.2.4 Contact us ------------------- */
+/* --------------- 4.2.4 Contact us ------------------- */
 
 .box-4 {
     background: linear-gradient(90deg, var(--blauw), var(--paars));
@@ -372,8 +397,9 @@ form div {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding:16px 0;
+    padding: 16px 0;
 }
+
 form p {
     font-size: 10px;
     font-weight: 700;
@@ -389,6 +415,7 @@ form input {
     text-transform: capitalize;
 
 }
+
 form textarea {
     width: 100%;
     flex-basis: 120px;
@@ -397,6 +424,7 @@ form textarea {
     font-size: 10px;
     text-transform: capitalize;
 }
+
 /* --------------- 4.2.1 Introduction ------------------- */
 
 
@@ -416,12 +444,81 @@ footer {
     p {
         font-size: 14px;
     }
-
-
-
-/* Minimaal 992px betekend regels die gelden voor kleine computerschermen */
-@media screen and (max-width: 570px) {
-    p {
-        font-size: 12px;
+    .inner-box .background-text {
+        position: absolute;
+        top: 400px;
+        font-size: 240px;
+    .inner-box {
+        margin: 0 18px;
+        width: 100%;
     }
 
+    .box-1 {
+        width: 100%;
+        flex-shrink: 1;
+        padding: 40px 0;
+    }
+
+    .box-2 {
+        width: 100%;
+        flex-shrink: 1;
+    }
+
+    .box-4 {
+        width: 100%;
+    }
+
+    .box-5 {
+        width: 100%;
+    }
+
+    .projects {
+        flex-basis: 120px;
+        flex-shrink: 1;
+        width: 100%;
+    }
+
+    .description {
+        flex-shrink: 1;
+        width: 100px;
+        height: 100px;
+    }}
+
+    /* Minimaal 992px betekend regels die gelden voor kleine computerschermen */
+
+    @media screen and (max-width: 570px) {
+        p {
+            font-size: 12px;
+        }
+
+        .inner-box {
+            margin: 0 18px;
+            flex-basis: 100%;
+        }
+
+        .box-1 {
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .box-2 {
+            width: 100%;
+        }
+
+        .box-4 {
+            width: 100%;
+        }
+
+        .box-5 {
+            width: 100%;
+        }
+
+        .projects {
+            flex-basis: 100%;
+            flex-direction: column;
+        }
+
+        .description {
+            width: 100%;
+            flex-basis: 250px;
+        }}
