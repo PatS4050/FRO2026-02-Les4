@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Main
+        4.2.2 projecten
+        4.2.3 services
+        4.2.4 Contact us
+        4.3 Footer
+ */
+/*    etc.*/
+/*5. Media Queries*/
+/*///////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+:root {
+    --paars: #5722CD;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --lichtpaars: #F2F0FF;
+    --lichtgrijs: #F3F6F9;
+    --grijs: #7A7A7A;
+    --width-l: 990px;
+    --width-m: 620px;
+    --width-s: 320px;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- *
+
+ */
+p {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 19px;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: normal;
+    color: var(--zwart);
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: normal;
+    color: white;
+}
+
+H2, H3, H4, H5, H6 {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+a {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 1;
+}
+
+.outer-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+
+.inner-box {
+    margin: 0 18px;
+    flex-basis: var(--width-l);
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* --------------- 3.1 Reusables ----------------------- */
+.box-1 {
+    width: var(--width-m);
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    z-index: 2;
+}
+
+
+.box-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 21px;
+    padding: 48px;
+}
+
+.box-5 {
+    width: var(--width-m);
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.picto {
+    width: 36px;
+    image-rendering: high-quality;
+    margin: -5px;
+}
+
+.picto-box {
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    color: white;
+    background: var(--roze);
+    padding: 18px 48px;
+    border-radius: 36px;
+    border: none;
+    box-shadow: var(--paars) 5px 5px 5px;
+    font-size: 10px;
+    font-weight: 100;
+    font-style: initial;
+    text-transform: uppercase;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid white;
+    border-right: 2px solid transparent;
+    border-top: 18px solid transparent;
+}
+
+.triangle-2 {
+    width: 0;
+    height: 0;
+    border-left: 2px solid transparent;
+    border-right: 100vw solid white;
+    border-bottom: 19px solid transparent;
+}
+
+›
+.triangle-1 {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid var(--lichtgrijs);
+    /*border-left: max(990px) solid red;*/
+    border-right: 2px solid transparent;
+    border-top: 18px solid transparent;
+}
+
+.triangle-3 {
+    width: 0;
+    height: 0;
+    border-left: 2px solid transparent;
+    border-right: 100vw solid var(--lichtgrijs);
+    /*border-right: max(990px) solid green;*/
+    border-bottom: 19px solid transparent;
+    /*background: var(--lichtgrijs);*/
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+header .inner-box {
+    background: linear-gradient(90deg, var(--blauw), var(--paars));
+}
+
+nav {
+    padding: 12px 36px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 36px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .inner-box p {
+    color: white;
+}
+
+
+/* --------------- 4.2 Main ------------------------- */
+
+main .box-1 p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 36px 0 0 0;
+
+}
+
+main .box-1 {
+    color: var(--paars);
+    gap: 28px;
+}
+
+/* --------------- 4.2.2 projecten------------------- */
+.inner-box .background-text {
+    background-clip: text;
+    position: absolute;
+    top: 500px;
+    font-size: 320px;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: var(--lichtpaars);
+    z-index: 2;
+}
+.box-2 {
+    background-color: var(--lichtgrijs);
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+.projects {
+    flex-basis: var(--width-l);
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    padding: 24px;
+}
+
+.projects:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.description {
+    flex-basis: 360px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/*p {*/
+/*    border: 3px solid var(--lichtgrijs);*/
+/*    font-size: 14px;*/
+/*    font-weight: 200;*/
+/*}*/
+
+.squiggle {
+    width: 42px;
+}
+
+.work {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--paars);
+}
+
+.img-wrapper {
+    flex-basis: 450px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.work::after {
+    display: block;
+    position: relative;
+    bottom: 9px;
+    left: 100px;
+    content: "";
+    width: 5%;
+    height: 2px;
+    background-color: var(--paars);
+    transition: width 0.4s ease-in-out;
+}
+
+.work:hover::after {
+    width: 20%;
+}
+
+/* --------------- 4.2.3 Services------------------- */
+.services {
+    border: 1px solid var(--paars);
+    box-shadow: 9px 9px 9px var(--lichtgrijs);
+    flex-basis: 240px;
+    padding: 24px;
+    height: 240px
+}
+
+.icon {
+    width: 69px;
+}
+
+.services H3 {
+    color: var(--paars);
+    padding: 4px 0;
+}
+
+.services p {
+    font-size: 10px;
+    font-weight: 100;
+}
+
+/* --------------- 4.2.4 Contact us ------------------- */
+
+.box-4 {
+    background: linear-gradient(90deg, var(--blauw), var(--paars));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-4 p {
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 0;
+}
+
+form p {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+form input {
+    width: 100%;
+    flex-basis: 40px;
+    color: var(--grijs);
+    align-items: center;
+    padding: 0 16px;
+    font-size: 10px;
+    text-transform: capitalize;
+
+}
+
+form textarea {
+    width: 100%;
+    flex-basis: 120px;
+    color: var(--grijs);
+    padding: 16px;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+/* --------------- 4.2.1 Introduction ------------------- */
+
+
+/* --------------- 4.3 Footer ------------------------- */
+footer {
+    background-color: var(--zwart);
+    padding: 16px;
+    font-weight: 100;
+    color: white;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+/* Alles wat men buiten de media query specificeert, geldt dan voor grote schermen */
+
+/* max 768px betekend regels die gelden voor tablets */
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 14px;
+    }
+    .inner-box .background-text {
+        position: absolute;
+        top: 400px;
+        font-size: 240px;
+    .inner-box {
+        margin: 0 18px;
+        width: 100%;
+    }
+
+    .box-1 {
+        width: 100%;
+        flex-shrink: 1;
+        padding: 40px 0;
+    }
+
+    .box-2 {
+        width: 100%;
+        flex-shrink: 1;
+    }
+
+    .box-4 {
+        width: 100%;
+    }
+
+    .box-5 {
+        width: 100%;
+    }
+
+    .projects {
+        flex-basis: 120px;
+        flex-shrink: 1;
+        width: 100%;
+    }
+
+    .description {
+        flex-shrink: 1;
+        width: 100px;
+        height: 100px;
+    }}
+
+    /* Minimaal 992px betekend regels die gelden voor kleine computerschermen */
+
+    @media screen and (max-width: 570px) {
+        p {
+            font-size: 12px;
+        }
+
+        .inner-box {
+            margin: 0 18px;
+            flex-basis: 100%;
+        }
+
+        .box-1 {
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .box-2 {
+            width: 100%;
+        }
+
+        .box-4 {
+            width: 100%;
+        }
+
+        .box-5 {
+            width: 100%;
+        }
+
+        .projects {
+            flex-basis: 100%;
+            flex-direction: column;
+        }
+
+        .description {
+            width: 100%;
+            flex-basis: 250px;
+        }}
